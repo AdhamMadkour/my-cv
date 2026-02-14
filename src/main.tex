@@ -1,0 +1,200 @@
+%! Author = abogbl
+%! Date = 14/02/2026
+
+
+\documentclass[a4paper,8pt]{article}
+
+\usepackage{parskip}
+\usepackage{hologo}
+\usepackage{fontspec}
+
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.98, top=.3in, bottom=.3in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.42\textwidth}
+
+%custom \section
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{1pt}{2pt}{2pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\color[HTML]{110223}%{1C033C}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+% \usepackage{times}
+
+% For underline
+\usepackage[normalem]{ulem}
+
+\setmainfont{Arial}  % Set it to whatever you like
+
+\begin{document}
+
+% non-numbered pages
+    \pagestyle{empty}
+
+
+    \begin{tabularx}{\linewidth}{@{} C @{}}
+\color[HTML]{1C033C} \Huge{Adham Ahmed} \\[6pt]
+\\
+\textcolor[HTML]{371e77}{\underline{\href{mailto:adham2272001@gmail.com}{\raisebox{-0.05\height}{\faEnvelope} adham2272001@gmail.com}} $|$}
+\textcolor[HTML]{371e77}{\href{tel:+201125832777}{\raisebox{-0.05\height}{\faMobile} +201125832777}}
+
+\textcolor[HTML]{371e77}{\underline{\href{https://github.com/AdhamMadkour}{\raisebox{-0.05\height}{\faGithub} github.com/AdhamMadkour}} $|$}
+\textcolor[HTML]{371e77}{\underline{\href{https://www.linkedin.com/in/adhammadkour/}{\raisebox{-0.05\height}{\faLinkedin} linkedin.com/in/adhammadkour}}}
+    \end{tabularx}
+
+
+%Experience
+    \section{Experience}
+
+    \begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\uline{\href{https://halan.com/}{halan (First private unicorn in Egypt)}}} \hfill \color[HTML]{371e77} Jun. 2024 – Present \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Software Engineer}} \hfill \color[HTML]{4B28A4} \textit{Go, Scala, MongoDB, Kafka, Kubernetes, Redis, Elasticsearch} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Implemented a new feature enabling users to pay via \textbf{Instapay}, integrating with the \textbf{Collect Plus API}.
+        \item Developed core features in \textbf{Halan Wallet}, an e-wallet supporting P2P transfers, P2M payments, and Halan service installments.
+        \item Migrated user and transaction data from the legacy \textbf{Raseedy Wallet} to the new wallet system.
+        \item Implemented cash-out, registration, and unregistration flows integrated with \textbf{Meeza (MDP)}.
+        \item Resolved critical bugs in production in collaboration with the QA team.
+        \item Built the backend for \textbf{Halan Investment Profile}, offering users real-time insights into their savings and equity funds.
+        \item Collaborated with mobile teams to support dynamic components rendered in the iOS and Android apps.
+        \item Engineered the \textbf{Microfinance Profile} module, guiding users through installment payments for their loans, which led to a \textbf{40\% increase} in users viewing their installment plans and an \textbf{88\% increase} in in-app installment payments.
+        \item Contributed to a major \textbf{migration of the loan and installment payment service} from Scala to Go, transitioning to an event-driven model using \textbf{Kafka} to communicate with the core banking system to avoid network issues.
+    \end{itemize}
+\end{minipage}
+    \end{tabularx}
+
+
+
+
+
+    \begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{\uline{\href{https://www.bld.ai/}{bld.ai}}} \hfill \color[HTML]{371e77} Nov. 2022 - Nov. 2023 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Software Engineer}}\ \hfill \color[HTML]{4B28A4} \textit{Python, Django, Git, GitLab, Open-AI, React.js, Docker} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Worked on an internal landing page project at bld.ai, utilizing ChatGPT API to generate dynamic content from Google Sheets data.
+        \item Collaborated across teams to align project objectives, enhancing user engagement.
+    \end{itemize}
+\end{minipage}
+    \end{tabularx}
+
+    \begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://www.bld.ai/}{bld.ai}}} \hfill \color[HTML]{371e77} Jul. 2022 - Oct. 2022 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Software Engineering Intern}}\ \hfill \color[HTML]{4B28A4} \textit{Python, JavaScript, HTML, CSS, Bootstrap, Django, React.js} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Completed a full-stack internship at bld.ai, gaining proficiency in frontend development with React.js and backend development using Django and REST APIs.
+    \end{itemize}
+\end{minipage}
+    \end{tabularx}
+
+    \begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://www.linkedin.com/company/orangele/}{Orange Innovation}}} \hfill \color[HTML]{371e77} Nov. 2021 - May. 2022 \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Software Engineering Intern}} \hfill \color[HTML]{4B28A4} \textit{Java, SQL, Spring, Spring Boot, Threads} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Contributed to the development of a production project involving a chatbot deployed on Smartly.ai, built using Spring Boot for the backend. The chatbot engaged users by suggesting healthy food recipes and provided YouTube videos for the chosen recipe {\uline{\href{https://github.com/AdhamMadkour/YummyBot}{YummyBot}}}.
+        \item
+        Learned Java sockets, JDBC, and threads.
+    \end{itemize}
+\end{minipage}
+    \end{tabularx}
+
+
+% Education
+    \section{Education}
+    \begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{October 6 University (O6U)} & \hfill \color[HTML]{371e77} Sep. 2019 - Jul. 2023 \\
+\color[HTML]{371e77} B.S. in Computer Science \\
+\multicolumn{2}{@{}X@{}}{ Achieved an Excellent Degree for my graduation project.}
+    \end{tabularx}
+
+% Projects
+    \section{Projects}
+    \begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://github.com/AdhamMadkour/elms-backend}{E-learning Management System (ELMS)}}} \hfill \color[HTML]{371e77} Feb. 2023 - Ongoing \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{E-learning Website Meeting, Assignments \& Quizzes}} \hfill \color[HTML]{4B28A4} \textit{Python, JavaScript, Django,  DRF \& channels, React.js } \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Developed a student-to-student connectivity feature using Django Channels.
+        \item Integrated Google Calendar API to automate event scheduling and notifications for platform users.
+        \item Implemented features for assignment submission and quizzes within the platform.
+    \end{itemize}
+\end{minipage}
+    \end{tabularx}
+
+    \begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{\uline{\href{https://github.com/AdhamMadkour/Biometric-Attendence}{Biometric Attendence}}} \hfill \color[HTML]{371e77} Oct. 2023 - Ongoing \\[4pt]
+\color[HTML]{371e77}\textbf{\textit{Desktop Application project to create reports and Calculate salaries.}} \hfill \color[HTML]{4B28A4} \textit{Python, Tkinter, OpenPyXL } \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Desktop application with a user interface to collect employee data and attendance events from the ZK-14 Biometric Machine.
+        \item Generate attendance and payroll reports for employees in a company.
+    \end{itemize}
+\end{minipage}
+    \end{tabularx}
+
+% HONORS, AWARDS AND COMPETITIONS
+    \section{Honors, Awards and Competitions}
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Participated at Arab African Collegiate Programming Contest ( 2022 )
+        \item Participated at Egyptian Collegiate Programming Contest ( 2021, 2022, 2023 )
+        \item Solved +2000 problems on various online judges
+        \end{itemize}
+    \end{minipage}
+
+% Leadership and Volunteering
+    \section{Leadership and Volunteering}
+    \begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{ICPC O6U Community} \hfill \color[HTML]{371e77} Sep. 2020 - present \\[5pt]
+\color[HTML]{371e77}\textbf{\textit{Co-founder \& Mentor }} \\[5pt]
+\begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+        \item Guiding a community of CS students in their problem solving and Competitive Programming skills.
+        \item Orchestrating coding sessions, and coding competition events to enhance skills and encourage continuous learning.
+    \end{itemize}
+\end{minipage}
+    \end{tabularx}
+
+    \section{Skills}
+    \color[HTML]{1C033C}\textbf{Languages:} \\[2pt]
+    \color[HTML]{371e77} \hspace*{4ex} Python, Java, C/C++, SQL, HTML, JavaScript \\[3pt]
+    \color[HTML]{1C033C}\textbf{Technologies \& Tools:} \\[2pt]
+    \color[HTML]{371e77} \hspace*{4ex} Django, React.js, Git, Linux, Docker, CI/CD (familiar with), Spring \& Spring Boot\\[3pt]
+    \color[HTML]{1C033C}\textbf{concepts:} \\[2pt]
+    \color[HTML]{371e77} \hspace*{4ex} Object Oriented Programming, Problem Solving, Algorithms, Data Structures, Testing.\\[3pt]
+
+\end{document}
